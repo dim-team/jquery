@@ -1,0 +1,10 @@
+{
+  "name": "jquery",
+  "repo": "dim-team/jquery",
+  "exports" : "jquery",
+  "description": "A custom-built jquery - jquery event fx data selector",
+  "version": "1.11.3",
+  "keywords": ["selector", "$", "jquery"],
+  "scripts": ["index.js"],
+  "license": "MIT"
+}
