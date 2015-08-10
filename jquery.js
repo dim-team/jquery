@@ -10308,6 +10308,12 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 // AMD loader is present. jQuery is a special case. For more information, see
 // https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
+
+if (typeof module !== 'undefined' && module.exports) {
+	window.$ = jQuery;
+	module.exports = jQuery;
+}
+
 if ( typeof define === "function" && define.amd ) {
 	define( "jquery", [], function() {
 		return jQuery;
@@ -10342,9 +10348,6 @@ jQuery.noConflict = function( deep ) {
 if ( typeof noGlobal === strundefined ) {
 	window.jQuery = window.$ = jQuery;
 }
-
-
-module.exports = jQuery;
 
 return jQuery;
 
